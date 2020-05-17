@@ -6,5 +6,9 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `Broken Core`,
+    description: 'Info on artists, events, releases and more.'
+  },
+  plugins: ['gatsby-plugin-typescript'],
 }
