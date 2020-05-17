@@ -1,4 +1,9 @@
-.container {
+.layout {
     margin: 3rem auto;
-    max-width: 600px;
+    max-width: 650px;
+    padding: 0 1rem;
+}
+
+.header {
+    margin-bottom: 1.5rem;
 }
