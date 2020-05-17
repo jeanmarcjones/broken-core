@@ -10,5 +10,5 @@ module.exports = {
     title: `Broken Core`,
     description: 'Info on artists, events, releases and more.'
   },
-  plugins: ['gatsby-plugin-typescript', `gatsby-plugin-sass`],
+  plugins: ['gatsby-plugin-typescript'],
 }

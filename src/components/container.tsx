@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 
-const container: FunctionComponent = ({ children }) => {
-  return <div className='container'>{children}</div>
+const Container: FunctionComponent = ({ children }) => {
+  return <div>{children}</div>
 }
 
-export default container
+export default Container
