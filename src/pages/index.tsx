@@ -1,10 +1,12 @@
-import React  from 'react'
+import React, { FunctionComponent } from "react"
 import Layout from '../components/layout'
 
-export default () => {
+const Home: FunctionComponent = () => {
   return (
     <Layout>
       <div>Hello broken core!</div>
     </Layout>
   )
 }
+
+export default Home
