@@ -1,10 +1,10 @@
 import React  from 'react'
-import Container from '../components/Container'
+import Layout from '../components/layout'
 
 export default () => {
   return (
-    <Container>
+    <Layout>
       <div>Hello broken core!</div>
-    </Container>
+    </Layout>
   )
 }
