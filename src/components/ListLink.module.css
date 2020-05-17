@@ -1,0 +1,13 @@
+.link {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.link__text {
+    color: #ccc;
+}
+
+.link__text:hover {
+    color: #ccc;
+    opacity: 0.8;
+}

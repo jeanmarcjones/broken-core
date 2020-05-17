@@ -5,5 +5,11 @@
 }
 
 .header {
+    display: flex;
     margin-bottom: 1.5rem;
+    justify-content: space-between;
+}
+
+.header__nav {
+    list-style: none;
 }
