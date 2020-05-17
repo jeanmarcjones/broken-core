@@ -12,6 +12,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-typescript',
-    'gatsby-transformer-typescript-css-modules'
+    'gatsby-transformer-typescript-css-modules',
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
   ],
 }
