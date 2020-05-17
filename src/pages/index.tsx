@@ -1,3 +1,10 @@
-import React from "react"
+import React  from 'react'
+import Container from '../components/Container'
 
-export default () => <div>Hello world!</div>
+export default () => {
+  return (
+    <Container>
+      <div>Hello broken core!</div>
+    </Container>
+  )
+}
