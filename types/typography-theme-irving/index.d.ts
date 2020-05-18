@@ -1,1 +1,1 @@
-declare module 'typography-theme-irving';
+declare module 'typography-theme-irving'

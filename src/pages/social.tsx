@@ -7,6 +7,6 @@ const Social: FunctionComponent = () => {
       <p>Social</p>
     </Layout>
   )
-};
+}
 
 export default Social

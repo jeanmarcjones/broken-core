@@ -1,1 +1,1 @@
-declare module 'typography';
+declare module 'typography'

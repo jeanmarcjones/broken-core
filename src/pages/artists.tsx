@@ -9,5 +9,4 @@ const Artists: FunctionComponent = () => {
   )
 }
 
-export default Artists;
-
+export default Artists

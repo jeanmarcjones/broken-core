@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent } from 'react'
 import Layout from '../components/layout'
 
 const Home: FunctionComponent = () => {
