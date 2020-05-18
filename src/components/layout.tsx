@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import * as styles from './layout.module.css'
+import styles from './layout.module.css'
 import ListLink from './ListLink'
 
 const Layout: FunctionComponent = ({ children }) => {
