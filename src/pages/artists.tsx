@@ -2,7 +2,11 @@ import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
-const Artists: FunctionComponent = ({ data }) => {
+interface Props {
+  data: any
+}
+
+const Artists: FunctionComponent<Props> = ({ data }) => {
   return (
     <Layout>
       <p>Artists</p>

@@ -6,3 +6,7 @@ cat: "BC002"
 ---
 
 soundcloud:https://soundcloud.com/brokencoreofficial/sets/shitlip-cannon-bone-ep
+
+Broken Core are proud to present their second digital release from the one and only Shitlip! Self described as a 
+legitimate dickhead, Shitlip blends a mixture of Speedcore/Breakcore and Gabber elements. Creating his own unique brand
+of filth whilst not taking things too seriously, we're big fans of the man with shit on his lip here at Broken Core.
