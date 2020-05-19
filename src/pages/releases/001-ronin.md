@@ -3,9 +3,8 @@ artist: "Ronin"
 title: "Ghost In The Machine"
 date: "02/10/2019"
 cat: "BC001"
+soundcloud: "915084568"
 ---
-
-soundcloud:https://soundcloud.com/brokencoreofficial/sets/ronin-ghost-in-the-machine-ep-broken-core-digi-001
 
 Ronin is a London-based audio/visual artist, underground media magnate, catalyst for hire and general trouble-maker who
 has a slightly schizo take on modern electronic dance music.
