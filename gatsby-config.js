@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-typescript',
-    'gatsby-transformer-typescript-css-modules',
+    'gatsby-plugin-css-modules-typings',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

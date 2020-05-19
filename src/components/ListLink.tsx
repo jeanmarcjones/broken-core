@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { Link } from 'gatsby'
-import styles from './ListLink.module.css'
+import * as styles from './ListLink.module.css'
 
 interface Props {
   to: string
