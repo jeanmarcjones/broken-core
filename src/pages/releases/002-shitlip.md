@@ -2,7 +2,7 @@
 artist: "Shitlip"
 title: "Cannon Bone"
 date: "14/01/2020"
-cat: "BC002"
+cat: 002
 soundcloud: "966338965"
 ---
 

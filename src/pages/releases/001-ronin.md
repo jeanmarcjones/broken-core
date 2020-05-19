@@ -2,7 +2,7 @@
 artist: "Ronin"
 title: "Ghost In The Machine"
 date: "02/10/2019"
-cat: "BC001"
+cat: 001
 soundcloud: "915084568"
 ---
 

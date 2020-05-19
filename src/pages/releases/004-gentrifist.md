@@ -2,7 +2,7 @@
 artist: "Gentrifist"
 title: "Black Swan"
 date: "30/04/2020"
-cat: "BC004"
+cat: 004
 soundcloud: "1042689073"
 ---
 

@@ -2,7 +2,7 @@
 artist: "Coman Dante"
 title: "Strider"
 date: "16/04/2020"
-cat: "BC003"
+cat: 003
 soundcloud: "1029678433"
 ---
 

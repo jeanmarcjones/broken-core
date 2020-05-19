@@ -6,7 +6,7 @@ interface Node {
   node: {
     html: string
     frontmatter: {
-      cat: string
+      cat: number
       soundcloud: string
     }
   }
@@ -39,10 +39,12 @@ const Release: FunctionComponent = () => {
 
   return (
     <div>
-      {releases.map((release: Node) => {
-        const { cat, soundcloud } = release.node.frontmatter
-        return <Soundcloud key={cat} id={soundcloud} />
-      })}
+      {releases
+        .sort((a, b) => b.node.frontmatter.cat - a.node.frontmatter.cat)
+        .map(release => {
+          const { cat, soundcloud } = release.node.frontmatter
+          return <Soundcloud key={cat} id={soundcloud} />
+        })}
     </div>
   )
 }
