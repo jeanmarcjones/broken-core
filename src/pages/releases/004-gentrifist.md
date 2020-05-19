@@ -3,7 +3,7 @@ artist: "Gentrifist"
 title: "Black Swan"
 date: "30/04/2020"
 cat: "BC004"
-soundcloud: "1029678433"
+soundcloud: "1042689073"
 ---
 
 Up next from Broken Core we have the debut EP from Gentrifist - Black Swan EP! Five eclectic tracks spanning across

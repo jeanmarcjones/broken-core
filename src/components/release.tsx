@@ -1,14 +1,13 @@
 import React, { FunctionComponent } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import Soundcloud from './Soundcloud'
 
 interface Node {
   node: {
     html: string
     frontmatter: {
-      title: string
-      artist: string
-      date: string
       cat: string
+      soundcloud: string
     }
   }
 }
@@ -27,12 +26,9 @@ const Release: FunctionComponent = () => {
           edges {
             node {
               frontmatter {
-                artist
                 cat
-                date
-                title
+                soundcloud
               }
-              html
             }
           }
         }
@@ -44,12 +40,8 @@ const Release: FunctionComponent = () => {
   return (
     <div>
       {releases.map((release: Node) => {
-        return (
-          <div
-            key={release.node.frontmatter.cat}
-            dangerouslySetInnerHTML={{ __html: release.node.html }}
-          />
-        )
+        const { cat, soundcloud } = release.node.frontmatter
+        return <Soundcloud key={cat} id={soundcloud} />
       })}
     </div>
   )

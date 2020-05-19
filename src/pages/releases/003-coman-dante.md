@@ -3,7 +3,7 @@ artist: "Coman Dante"
 title: "Strider"
 date: "16/04/2020"
 cat: "BC003"
-soundcloud: ""
+soundcloud: "1029678433"
 ---
 
 Since playing at our first Amsterdam party Coman Dante has been a key resident of Broken Core Collective, smashing up
