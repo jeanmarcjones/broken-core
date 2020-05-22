@@ -2,3 +2,12 @@ body {
     background-color: #000;
     color: #ccc
 }
+
+a {
+    color: #ccc;
+}
+
+a:hover {
+    color: #ccc;
+    opacity: 0.8;
+}
