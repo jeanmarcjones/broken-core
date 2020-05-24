@@ -33,7 +33,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-soundcloud',
             options: {
-              width: 800,
+              width: '100%',
               height: 400,
             },
           },

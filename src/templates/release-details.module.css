@@ -1,0 +1,15 @@
+.title {
+    margin: 2.5rem 0 1.5rem 0;
+}
+
+.content > p:not(:last-child) {
+    margin: 0 0 0.7rem;
+}
+
+.content > div {
+    line-height: 0;
+}
+
+.content > div > iframe {
+    margin: 0 0 1rem;
+}
