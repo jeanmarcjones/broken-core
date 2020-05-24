@@ -1,20 +1,15 @@
 import React, { FunctionComponent } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Soundcloud from './Soundcloud'
+import { ReleaseNode } from '../types/graphql/ReleaseNode'
 
-interface Node {
-  node: {
-    html: string
-    frontmatter: {
-      cat: number
-      soundcloud: string
-    }
-  }
+interface Edges {
+  node: ReleaseNode
 }
 
 interface Data {
   allMarkdownRemark: {
-    edges: Node[]
+    edges: Edges[]
   }
 }
 
@@ -38,14 +33,14 @@ const Release: FunctionComponent = () => {
   const releases = data.allMarkdownRemark.edges
 
   return (
-    <div>
+    <>
       {releases
         .sort((a, b) => b.node.frontmatter.cat - a.node.frontmatter.cat)
         .map(release => {
           const { cat, soundcloud } = release.node.frontmatter
           return <Soundcloud key={cat} id={soundcloud} />
         })}
-    </div>
+    </>
   )
 }
 
