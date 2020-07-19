@@ -35,7 +35,13 @@ module.exports = {
     {
       files: ['*.js'],
       rules: {
-        '@typescript-eslint/no-var-requires': 'off', //
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: ['*.module.css.d.ts'],
+      rules: {
+        '@typescript-eslint/camelcase': 'off',
       },
     },
   ],
