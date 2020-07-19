@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from 'react'
 import Layout from '../components/layout'
-import Release from '../components/release'
+import ReleaseSlider from '../components/release'
 
 const Home: FunctionComponent = () => {
   return (
     <Layout>
-      <Release />
+      <ReleaseSlider />
     </Layout>
   )
 }

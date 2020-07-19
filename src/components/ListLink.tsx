@@ -9,9 +9,7 @@ interface Props {
 const ListLink: FunctionComponent<Props> = ({ to, children }) => {
   return (
     <li className={styles.link}>
-      <Link to={to} className={styles.link__text}>
-        {children}
-      </Link>
+      <Link to={to}>{children}</Link>
     </li>
   )
 }

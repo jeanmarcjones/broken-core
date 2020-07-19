@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, Suspense } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import Soundcloud from './Soundcloud'
 import { ReleaseNode } from '../types/graphql/ReleaseNode'
+const Soundcloud = React.lazy(() => import('./Soundcloud'))
 
 interface Edges {
   node: ReleaseNode
@@ -30,16 +30,19 @@ const Release: FunctionComponent = () => {
       }
     `
   )
-  const releases = data.allMarkdownRemark.edges
+
+  const releases = data.allMarkdownRemark.edges.sort(
+    (a, b) => b.node.frontmatter.cat - a.node.frontmatter.cat
+  )
 
   return (
     <>
-      {releases
-        .sort((a, b) => b.node.frontmatter.cat - a.node.frontmatter.cat)
-        .map(release => {
+      <Suspense fallback={<div>Loading...</div>}>
+        {releases.map(release => {
           const { cat, soundcloud } = release.node.frontmatter
           return <Soundcloud key={cat} id={soundcloud} />
         })}
+      </Suspense>
     </>
   )
 }
