@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 import * as styles from './release-details.module.css'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import { ReleaseNode } from '../types/graphql/ReleaseNode'
 
 interface Props {

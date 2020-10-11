@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 const Social: FunctionComponent = () => {
   return (
