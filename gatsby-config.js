@@ -35,6 +35,8 @@ module.exports = {
             options: {
               width: '100%',
               height: 400,
+              // eslint-disable-next-line @typescript-eslint/camelcase
+              auto_play: false,
             },
           },
         ],

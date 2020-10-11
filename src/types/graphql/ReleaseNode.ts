@@ -9,4 +9,7 @@ export interface ReleaseFrontmatter {
 export interface ReleaseNode {
   html: string
   frontmatter: ReleaseFrontmatter
+  fields: {
+    slug: string
+  }
 }

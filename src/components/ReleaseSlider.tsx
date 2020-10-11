@@ -1,8 +1,8 @@
-import React, { FunctionComponent, useState } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import React, { FunctionComponent, useMemo, useState } from 'react'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import { CSSTransition } from 'react-transition-group'
 import Soundcloud from './Soundcloud'
-import { ReleaseFrontmatter, ReleaseNode } from '../types/graphql/ReleaseNode'
+import { ReleaseNode } from '../types/graphql/ReleaseNode'
 import * as styles from './ReleaseSlider.module.css'
 
 interface Edges {
@@ -26,8 +26,11 @@ const ReleaseSlider: FunctionComponent = () => {
           edges {
             node {
               frontmatter {
-                cat
                 soundcloud
+                cat
+              }
+              fields {
+                slug
               }
             }
           }
@@ -42,9 +45,6 @@ const ReleaseSlider: FunctionComponent = () => {
   const maxPage = releases.length - 1
 
   const toggleState = () => setState(state => !state)
-
-  const currentReleases = (): ReleaseFrontmatter =>
-    releases[currentPage].node.frontmatter
 
   const next = () => {
     setState(false)
@@ -72,13 +72,21 @@ const ReleaseSlider: FunctionComponent = () => {
         // onEnter={() => setState(false)}
         // onExited={() => setState(false)}
       >
-        <Soundcloud id={currentReleases().soundcloud} key={currentPage} />
+        <Soundcloud
+          id={releases[currentPage].node.frontmatter.soundcloud}
+          key={currentPage}
+        />
       </CSSTransition>
       <div className={styles.releaseSlider__buttonWrapper}>
         <button className={styles.releaseSlider__button} onClick={prev}>
           prev
         </button>
-        <button className={styles.releaseSlider__button}>Details</button>
+        <Link
+          className={styles.releaseSlider__button}
+          to={releases[currentPage].node.fields.slug}
+        >
+          details
+        </Link>
         <button className={styles.releaseSlider__button} onClick={next}>
           next
         </button>
