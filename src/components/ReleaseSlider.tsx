@@ -1,7 +1,9 @@
-import React, { FunctionComponent, Suspense, useState } from 'react'
+import React, { FunctionComponent, useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import { CSSTransition } from 'react-transition-group'
+import Soundcloud from './Soundcloud'
 import { ReleaseFrontmatter, ReleaseNode } from '../types/graphql/ReleaseNode'
-const Soundcloud = React.lazy(() => import('./Soundcloud'))
+import './ReleaseSlider.module.css'
 
 interface Edges {
   node: ReleaseNode
@@ -14,7 +16,8 @@ interface Data {
 }
 
 const ReleaseSlider: FunctionComponent = () => {
-  const [currentPage, setCurrentPage] = useState(0)
+  const [currentPage, setCurrentPage] = useState<number>(0)
+  const [state, setState] = useState<boolean>(true)
 
   const data: Data = useStaticQuery(
     graphql`
@@ -38,32 +41,44 @@ const ReleaseSlider: FunctionComponent = () => {
   )
   const maxPage = releases.length - 1
 
+  const toggleState = () => setState(state => !state)
+
   const currentReleases = (): ReleaseFrontmatter =>
     releases[currentPage].node.frontmatter
 
   const next = () => {
+    setState(false)
     const page = currentPage === maxPage ? 0 : currentPage + 1
     setCurrentPage(page)
+    // toggleState()
+    setState(true)
   }
 
   const prev = () => {
+    setState(false)
     const page = currentPage === 0 ? maxPage : currentPage - 1
     setCurrentPage(page)
+    // toggleState()
+    setState(true)
   }
 
   return (
-    <>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Soundcloud
-          key={currentReleases().cat}
-          id={currentReleases().soundcloud}
-        />
-      </Suspense>
+    <div style={{ flex: 1 }}>
+      <CSSTransition
+        in={state}
+        timeout={900}
+        classNames="fade"
+        unmountOnExit
+        // onEnter={() => setState(false)}
+        // onExited={() => setState(false)}
+      >
+        <Soundcloud id={currentReleases().soundcloud} key={currentPage} />
+      </CSSTransition>
       <div>
         <button onClick={prev}>prev</button>
         <button onClick={next}>next</button>
       </div>
-    </>
+    </div>
   )
 }
 
