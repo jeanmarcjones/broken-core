@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { CSSTransition } from 'react-transition-group'
 import Soundcloud from './Soundcloud'
 import { ReleaseFrontmatter, ReleaseNode } from '../types/graphql/ReleaseNode'
-import './ReleaseSlider.module.css'
+import * as styles from './ReleaseSlider.module.css'
 
 interface Edges {
   node: ReleaseNode
@@ -74,9 +74,14 @@ const ReleaseSlider: FunctionComponent = () => {
       >
         <Soundcloud id={currentReleases().soundcloud} key={currentPage} />
       </CSSTransition>
-      <div>
-        <button onClick={prev}>prev</button>
-        <button onClick={next}>next</button>
+      <div className={styles.releaseSlider__buttonWrapper}>
+        <button className={styles.releaseSlider__button} onClick={prev}>
+          prev
+        </button>
+        <button className={styles.releaseSlider__button}>Details</button>
+        <button className={styles.releaseSlider__button} onClick={next}>
+          next
+        </button>
       </div>
     </div>
   )

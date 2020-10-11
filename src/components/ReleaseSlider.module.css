@@ -21,3 +21,27 @@
     /*transform: translateX(100%);*/
     /*transition: opacity 200ms, transform 200ms;*/
 }
+
+.releaseSlider__buttonWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.releaseSlider__button,
+.releaseSlider__button:focus {
+    outline: none;
+    box-shadow: none;
+    opacity: .8;
+    background: #000;
+    color: rgba(255, 255, 255, .8);
+    border: solid rgba(255, 255, 255, .8) 1px;
+}
+
+.releaseSlider__button:active {
+    color: #fff;
+    border-color: #fff;
+}
+
+.releaseSlider__button:hover {
+    border-color: #fff;
+}
