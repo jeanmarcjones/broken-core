@@ -5,7 +5,7 @@
 
 .fade-enter-active {
     opacity: 1;
-    transition: opacity 900ms;
+    transition: opacity 100ms;
     /*transform: translateX(0);*/
     /*transition: opacity 200ms, transform 200ms;*/
 }
@@ -17,14 +17,19 @@
 
 .fade-exit-active {
     opacity: 0;
-    transition: opacity 900ms;
+    transition: opacity 100ms;
     /*transform: translateX(100%);*/
     /*transition: opacity 200ms, transform 200ms;*/
+}
+
+.releaseSlider {
+    flex: 1;
 }
 
 .releaseSlider__buttonWrapper {
     display: flex;
     justify-content: space-between;
+    padding-top: 15.25rem;
 }
 
 .releaseSlider__button,
