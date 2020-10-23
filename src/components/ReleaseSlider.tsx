@@ -51,26 +51,30 @@ const ReleaseSlider: FunctionComponent = () => {
   )
   const maxPage = releases.length - 1
 
-  const [reverse, setReverse] = useState<boolean>(false)
+  const [dir, setDir] = useState<boolean>(false)
   const [currentPage, setCurrentPage] = useState<number>(0)
   const transitions = useTransition(currentPage, item => item, {
     from: {
       position: 'absolute',
-      transform: 'translate3d(-150vh,0,0)',
+      background: '#fff',
+      opacity: 0,
+      transform: `translate3d(${dir ? -150 : 150}vh,0,0)`,
     },
-    enter: { transform: 'translate3d(0vh,0,0)' },
-    leave: { transform: 'translate3d(+150vh,0,0)' },
-    reverse,
+    enter: { opacity: 1, transform: 'translate3d(0vh,0,0)' },
+    leave: {
+      opacity: 0,
+      transform: `translate3d(${dir ? 150 : -150}vh,0,0)`,
+    },
   })
 
   const next = () => {
-    setReverse(false)
+    setDir(false)
     const page = currentPage === maxPage ? 0 : currentPage + 1
     setCurrentPage(page)
   }
 
   const prev = () => {
-    setReverse(true)
+    setDir(true)
     const page = currentPage === 0 ? maxPage : currentPage - 1
     setCurrentPage(page)
   }
